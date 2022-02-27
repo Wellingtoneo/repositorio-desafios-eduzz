@@ -1,0 +1,111 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    background-color: rgb(245, 216, 216);
+}
+
+.main-game
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-game span 
+{
+    position: absolute;
+    top: 53vh;
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(120, 201, 45);
+}
+
+
+.genius
+{
+    display: grid;
+    grid-template-areas:
+        'titulo titulo'
+        'score score'
+        'verde vermelho'
+        'amarelo azul';
+    grid-template-rows: 2fr 2fr 6fr 6fr;
+    grid-gap: 10px;
+    border: 1px solid #fff;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    min-width: 25em;
+    min-height: 30em;
+}
+
+.titulo
+{
+    grid-area: titulo;
+    grid-row: span;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: darkorchid;
+    border-radius: 5px;
+}
+
+.score-text{
+    grid-area: score;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+}
+
+.blue
+{
+    grid-area: azul;
+    background-color: rgb(24, 24, 240);
+    border-radius: 100% 0 100%;
+}
+
+.red
+{
+    grid-area: vermelho;
+    background-color: rgb(240, 24, 24);
+    border-radius: 0 100%;
+}
+
+.yellow
+{
+    grid-area: amarelo;
+    background-color: rgb(240, 240, 24);
+    border-radius: 0 100%;
+}
+
+.green
+{
+    grid-area: verde;
+    background-color: rgb(24, 240, 24);
+    border-radius: 100% 0;
+}
+.blue:hover, .yellow:hover, .red:hover, .green:hover
+{
+    cursor: pointer;
+}
+.selected{
+    opacity: 0.4;
+    width: 103%;
+    transition: 0.5s;
+}
